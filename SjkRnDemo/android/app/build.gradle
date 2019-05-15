@@ -1,4 +1,6 @@
 apply plugin: "com.android.application"
+//TODO <数极客SDK> 启用插件
+apply plugin: 'com.shujike.agent'
 
 import com.android.build.OutputFile
 
@@ -137,10 +139,18 @@ android {
     }
 }
 
+//TODO <数极客SDK> 导入sdk包
+repositories{
+    flatDir {
+        dirs 'libs'
+    }
+}
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "com.facebook.react:react-native:+"  // From node_modules
+    //TODO <数极客SDK> 注意修改aar文件名
+    implementation(name: 'shujike-android-sdk-3.1.0', ext: 'aar')
 }
 
 // Run this once to be able to run the application with BUCK
