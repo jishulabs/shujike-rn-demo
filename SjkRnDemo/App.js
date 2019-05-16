@@ -21,9 +21,9 @@ const instructions = Platform.select({
 //var ttt = NativeModules.SjkModule.TEST1;
 var t = "test 数极客 rn SDK !";
  //TODO <数极客SDK> 统计事件方法事例
-//NativeModules.SjkModule.setAttribute('{"TestMobileAttr":"测试Mobile属性","TestMobileAttr2":"1"}');
-//NativeModules.SjkModule.bindUserInfo('{"userId":"RN123456","userRegisterChannel":"shujike","userSex":"男","userAge":"25","userType":"管理","userLevel":"5级","userProvince":"天津","userCity":"东丽区"}');
-//NativeModules.SjkModule.postEvent("TestMobile",'{"d_name":"测试Mobile事件name","m_id":"1","ea_jihua":"事件属性测试RN"}');
+NativeModules.SjkModule.setAttribute('{"TestMobileAttr":"测试Mobile属性","TestMobileAttr2":"1"}');
+NativeModules.SjkModule.bindUserInfo('{"userId":"RN123456","userRegisterChannel":"shujike","userSex":"男","userAge":"25","userType":"管理","userLevel":"5级","userProvince":"天津","userCity":"东丽区"}');
+NativeModules.SjkModule.postEvent("TestMobile",'{"d_name":"测试Mobile事件name","m_id":"1","ea_jihua":"事件属性测试RN"}');
 
 
 type Props = {};
